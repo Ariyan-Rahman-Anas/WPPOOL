@@ -1,0 +1,101 @@
+<button id="menu-toggle" class="menu-toggle flex flex-col gap-1">
+                    <div class="menu-line1 bg-white h-[.12rem] w-5 rounded-full"></div>
+                    <div class="menu-line2 bg-white h-[.12rem] w-5 rounded-full"></div>
+                    <div class="menu-line3 bg-white h-[.12rem] w-5 rounded-full"></div>
+                </button>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WPPOOL-Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="border-4 border-black">
+    <header class="bg-primar border-4 px-5 py-3">
+        <!-- nav-bar starts from here -->
+        <nav class="flex items-center justify-between border-4 border-black ">
+            <div class="left logo">
+                <div class="w-2/3">
+                    <img src="./../src/assets/logo.png" alt="WPPOOL's logo" class="w-full h-full">
+                </div>
+            </div>
+            <div class="right flex items-center gap-5 relative border-4 border-black ">
+                <button class="hidden md:block w-8 h-8 border rounded-full p-1.5">
+                    <img src="./../src/assets/share-node.svg" alt="share node icon" class="w-full h-full">
+                </button>
+                <button class="hidden md:block border px-5 py-2 text-white rounded-full">Download the 2024 Report</button>
+                <div class="relativ">
+                    <button id="menu-toggle" class="menu-toggle flex flex-col gap-1">
+                    <div class="menu-line1 bg-white h-[.12rem] w-5 rounded-full"></div>
+                    <div class="menu-line2 bg-white h-[.12rem] w-5 rounded-full"></div>
+                    <div class="menu-line3 bg-white h-[.12rem] w-5 rounded-full"></div>
+                </button>
+                <!-- menu items -->
+                 <div id="menu-items-parent" class="menu-items hidden absolute top-10 left-10 bg-white ">
+                <ul class="text-black">
+                <li class="py-1"><a href="#">The WPPOOL Index</a></li>
+                <li class="py-1"><a href="#">All Companies</a></li>
+                <li class="py-1"><a href="#">Potential Future Listings</a></li>
+                <li class="py-1"><a href="#">State of USA</a></li>
+                <li class="py-1"><a href="#">Stories & Ideas</a></li>
+                <li class="py-1"><a href="#">About WPPOOL</a></li>
+                <li class="py-1"><a href="#">WPPOOL Portfolio Companies</a></li>
+                <li class="py-1"><a href="#" class="text-primary">Visit WPPOOL</a></li>
+            </ul>
+                 </div>
+                <!-- menu items -->
+                </div>
+                
+            </div>
+        </nav>
+        <!-- nav-bar ends here -->
+
+        <!-- menu starts here -->
+        <!-- menu ends here -->
+
+        <div class="banner pt-40 md:pt-0 flex flex-col md:items-center md:justify-center gap-10 min-h-[90vh] relative">
+            <div class="w-full text-center">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-6xl font-semibold tracking-wide">The WPPOOL Index</h1>
+                    <p class="my-2 text-gray-200 text-lg">Monitor the performance of emerging, publicly traded financial technology company!</p>
+                </div>
+            </div>
+            
+            <div class="absolute left-5 bottom-32 md:bottom-5 grid grid-cols-2 md:grid-cols-1 place-items-center md:place-items-start gap-y-5 text-gray-300">
+                <div>
+                    <h1 class="text-4xl">55</h1>
+                    <p class="text-gray-400 text-lg">Companies</p>
+                </div>
+                <div>
+                    <h1 class="text-4xl">$397B</h1>
+                    <p class="text-gray-400 text-lg">Market cap</p>
+                </div>
+                <div>
+                    <h1 class="text-4xl">3.7x</h1>
+                    <p class="text-gray-400 text-lg">Revenue multiple</p>
+                </div>
+                <div>
+                    <h1 class="text-4xl">48%</h1>
+                    <p class="text-gray-400 text-lg">LTM avg. revenue growth rate</p>
+                </div>
+            </div>
+            <div class="absolute right-5 bottom-5 w-[3rem] h-[3rem] bg-white rounded-full p-2 text-black">
+                <img src="./../src/assets/1.svg" alt="down arrow" class="w-full h-full">
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

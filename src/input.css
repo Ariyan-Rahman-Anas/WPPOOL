@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-btn {
+  @apply text-white bg-primary border border-transparent px-4 py-1.5 rounded-full hover:text-primary hover:bg-white hover:border-primary duration-500;
+}
+
+.portfolio-companies {
+  @apply w-full h-full flex items-center justify-center  bg-white p-4 rounded-lg shadow-md hover:bg-gray-100 duration-500;
+}
