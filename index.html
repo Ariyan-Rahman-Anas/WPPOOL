@@ -299,7 +299,122 @@
                 <option value="2017">2017</option>
                 <option value="2016">2016</option>
             </select>
-            <p class="text-sm my-2" >Click through the slides of download the report to view natively in your device.</p>
+            <p class="text-sm mt-2 mb-4" >Click through the slides of download the report to view natively in your device.</p>
+
+            <!-- slider starts from here -->
+             <div id="all-sliders" class="relative overflow-hidden w-full">
+                <div class="slider-container relative overflow-hidden w-full">
+                    <div class="slider flex items-center justify-between gap-4 transition-transform duration-500  ">
+                        <!-- Slide 1 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0 ">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/1.png" alt="Slide 1" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/2.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/3.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/1.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/2.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/3.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/1.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/2.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 9 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/3.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 10 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/1.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 11 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/2.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                        <!-- Slide 12 -->
+                        <div class="slide min-wfull w-[50%] flex-shrink-0">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <img src="./../src/assets/sliders/3.png" alt="Slide 2" class="w-full">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center justify-between gap-2 mt-4 ">
+                    <div class="indicator-parents flex items-center gap-10  ">
+                        <!-- Navigation buttons -->
+                        <div class="flex items-center gap-3">
+                            <button id="prev" class="transform translatey-1/2 bg-white hover:bg-primary duration-500 rounded-full shadow p-2 group ">
+                            <svg class="w-6 h-6 text-primary group-hover:text-white duration-500 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                            </button>
+                            <button id="next" class="transform translatey-1/2 bg-white hover:bg-primary duration-500 rounded-full shadow p-2 group ">
+                            <svg class="w-6 h-6 text-primary group-hover:text-white duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                            </button>
+                        </div>
+
+                        <!-- slider-indicator -->
+                        <div id="slider-indicator" class="flex items-center gap-2 text-sm ">
+                            <p>Pages</p>
+                            <select id="slider-select" name="select-slides" class="text-lg shadow text-black bg-white px-4 py-1.5 rounded-full hover:text-white hover:bg-primary duration-500">
+                                <option value="1-2">1 and 2</option>
+                                <option value="3-4">3 and 4</option>
+                                <option value="5-6">5 and 6</option>
+                                <option value="7-8">7 and 8</option>
+                                <option value="9-10">9 and 10</option>
+                                <option value="9-10">11 and 12</option>
+                            </select>
+                            <p>of <span id="total-slides"></span></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button id="download-report" class="primary-btn">Download the 2024 Report</button>
+                    </div>
+                </div>
+            </div>
+            <!-- slider ends here -->
         </section>
         <!-- states-of-USA section starts from here -->
 
@@ -404,61 +519,61 @@
                     <img src="./../src/assets/selected-companies/alibaba.png" alt="alibaba" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/vendr.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/vendr.png" alt="vendr" >
                 </div>
                 <div class="portfolio-companies">
                     <img src="./../src/assets/selected-companies/alibaba.png" alt="alibaba" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/snapdocs.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/snapdocs.png" alt="snapdocs" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/vendr.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/vendr.png" alt="vender" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/snapdocs.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/snapdocs.png" alt="snapdocs" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/toast.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/toast.png" alt="toast" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/conne.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/conne.png" alt="conne" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/conne.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/conne.png" alt="conne" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/mineral.png" alt="mineral" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/flywire.png" alt="flywire" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/quovo.png" alt="quovo" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/kensh.png" alt="kensh" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/futureAd.png" alt="futureAd" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/argyle.png" alt="argyle" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/mineral.png" alt="mineral">
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/snapdocs.png" alt="snapdocs" >
+                </div>
+                <div class="portfolio-companies">
+                    <img src="./../src/assets/selected-companies/toast.png" alt="toast" >
                 </div>
                 <div class="portfolio-companies">
                     <img src="./../src/assets/selected-companies/mineral.png" alt="alibaba" >
                 </div>
                 <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/flywire.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/quovo.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/kensh.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/futureAd.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/argyle.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/mineral.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/snapdocs.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/toast.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/mineral.png" alt="alibaba" >
-                </div>
-                <div class="portfolio-companies">
-                    <img src="./../src/assets/selected-companies/kensh.png" alt="alibaba" >
+                    <img src="./../src/assets/selected-companies/kensh.png" alt="kensh" >
                 </div>
             </div>
         </section>
