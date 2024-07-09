@@ -1,4 +1,45 @@
-// navbar navigation function
+// // functionality about when page scroll down
+// document.addEventListener("DOMContentLoaded", function () {
+//   const navbar = document.getElementById("navbar");
+//   const reportDownloadBtn = document.getElementById("report-download-btn");
+//   const menuBtn = document.querySelectorAll(".menu-line");
+//   const wppoolLogo = document.getElementById("wppool-logo")
+//   const nodeShare = document.getElementById("node-share");
+//   const nodeShareParent = document.getElementById("node-share-parent");
+
+//   const offset = 80; 
+
+//   window.addEventListener("scroll", function () {
+//     if (window.scrollY > offset) {
+//       wppoolLogo.src = "./src/assets/logo2.png"
+//       nodeShare.src = "./src/assets/share-node2.svg"
+//       nodeShareParent.classList.add("borderblack")
+//       navbar.classList.remove("bg-primary");
+//       navbar.classList.add("bg-white");
+//       navbar.classList.add("shadow-lg");
+//       reportDownloadBtn.classList.remove("primary-btn-two");
+//       reportDownloadBtn.classList.add("primary-btn");
+//       menuBtn.forEach((btn) => {
+//         btn.classList.remove("bg-white");
+//         btn.classList.add("bg-black");
+//       });
+//     } else {
+//       wppoolLogo.src = "./src/assets/logo.png";
+//       nodeShare.src = "./src/assets/share-node.svg";
+//       navbar.classList.remove("bg-white");
+//       navbar.classList.add("bg-primary");
+//       navbar.classList.remove("shadow-lg");
+//       reportDownloadBtn.classList.remove("primary-btn");
+//       reportDownloadBtn.classList.add("primary-btn-two");
+//       menuBtn.forEach((btn) => {
+//         btn.classList.remove("bg-black");
+//         btn.classList.add("bg-white");
+//       });
+//     }
+//   });
+// });
+
+// sticky navbar navigation function 
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const menuItemsParent = document.getElementById("menu-items-parent");
@@ -13,11 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     menuItemsParent.classList.add("hidden");
     menuToggle.classList.remove("active");
   });
-})
+});
 
-
-
-// navbar navigation function-2
+// default navbar navigation function-2
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle2 = document.getElementById("menu-toggle-two");
   const menuClose2 = document.getElementById("menu-close-two");
@@ -32,9 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menuItemsParent2.classList.add("hidden");
     menuToggle2.classList.remove("active");
   });
-})
-
-
+});
 
 //slider controlling function
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,17 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const sliderSelect = document.getElementById("slider-select");
   const totalSlide = document.getElementById("total-slides");
 
-  totalSlide.innerText = slides.length; 
+  totalSlide.innerText = slides.length;
 
   let currentIndex = 0;
   const slidesPerPage = 2;
   const totalPages = Math.ceil(slides.length / slidesPerPage);
-  console.log(totalPages);
-
-  const totalPages2 = Math.ceil(slides.length / slidesPerPage) + 1;
-  console.log(totalPages2);
-
-
+  
   // Generate dropdown options dynamically
   for (let i = 0; i < totalPages; i++) {
     const start = i * slidesPerPage + 1;

@@ -2,12 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*====--- custom scroll bar ---====*/
+::-webkit-scrollbar {
+  width: 0.30rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #2042b6;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #78beff;
+}
+
 .primary-btn {
   @apply text-white bg-primary border border-transparent px-4 py-1.5 rounded-full hover:text-primary hover:bg-white hover:border-primary duration-500;
 }
 
 .primary-btn-two {
-  @apply text-primary bg-white border border-transparent px-4 py-1.5 rounded-full hover:text-white hover:bg-primary hover:border-white duration-500;
+  @apply text-primary bg-white border border-primary px-4 py-1.5 rounded-full hover:text-white hover:bg-primary duration-500;
+}
+
+.li-design {
+  @apply text-white bg-primary p-2 rounded-lg flex items-center justify-between;
 }
 
 .portfolio-companies {

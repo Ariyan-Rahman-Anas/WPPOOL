@@ -6,135 +6,218 @@
     <title>WPPOOL-Assignment</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="bg-primary px-5 py-3">
-        <!-- nav-bar starts from here -->
-        <nav class="flex items-center justify-between">
-            <div class="left logo">
-                <div class="w-2/3">
-                    <img src="./src/assets/logo.png" alt="WPPOOL's logo" class="w-full h-full">
-                </div>
+<body class="bg-primary">
+
+    <!-- nav-bar starts from here -->
+    <nav class="py-3 px-6 flex items-center justify-between bg-transparent  ">
+        <div class="left logo">
+            <div class="w-2/3">
+                <img  src="./src/assets/logo.png" alt="WPPOOL's logo" class="w-full h-full">
             </div>
-            <div class="right flex items-center gap-5 relative">
-                <button class="hidden md:block w-8 h-8 border rounded-full p-1.5">
-                    <img src="./src/assets/share-node.svg" alt="share node icon" class="w-full h-full">
-                </button>
-                <button class="hidden md:block border px-5 py-2 text-white rounded-full">Download the 2024 Report</button>
-                <button id="menu-toggle" class="menu-toggle flex flex-col gap-1">
-                    <div class="menu-line1 bg-white h-[.12rem] w-5 rounded-full"></div>
-                    <div class="menu-line2 bg-white h-[.12rem] w-5 rounded-full"></div>
-                    <div class="menu-line3 bg-white h-[.12rem] w-5 rounded-full"></div>
-                </button>
+        </div>
+        <div class="right flex items-center gap-5 relative">
+            <button class="hidden md:block w-8 h-8 border rounded-full p-1.5">
+                <img  src="./src/assets/share-node.svg" alt="share node icon" class="w-full h-full">
+            </button>
+            <button  class="hidden md:block text-white bg-primary border border-white px-4 py-1.5 rounded-full hover:text-primary hover:bg-white hover:border-primary duration-500 ">Download the 2024 Report</button>
+            <button id="menu-toggle-two" class="menu-toggle flex flex-col gap-1">
+                <div class="menu-line1 bg-white h-[.12rem] w-5 rounded-full"></div>
+                <div class="menu-line2 bg-white h-[.12rem] w-5 rounded-full"></div>
+                <div class="menu-line3 bg-white h-[.12rem] w-5 rounded-full"></div>
+            </button>
                 <!-- menu starts here -->
-                <div id="menu-items-parent" class="menu-items hidden absolute top-8 md:top-[0rem] right-0 bg-white shadow-lg rounded-lg p-5 w-[90vw] md:w-[25rem] text-black z-50 ">
-                    <div class="flex items-center md:justify-between  gap-4 ">
-                        <button class="bg-black w-10 h-10 border rounded-full p-3">
+            <div  id="menu-items-parent-two" class="menu-items hidden absolute top-8 md:top-[0rem] right-0 bg-white shadow-lg rounded-lg p-5 w-[90vw] md:w-[25rem] text-black z-50 ">
+                <div class="flex items-center md:justify-between  gap-4 ">
+                    <button class="bg-black w-10 h-10 border rounded-full p-3">
                         <img src="./src/assets/share-node.svg" alt="share node icon" class="w-full h-full">
                         </button>
-                        <button class="primary-btn">Download the 2024 Report</button>
-                        <button id="menu-close" class="text-black border border-black cursor-pointer rounded-full px-4 py-2  w-fit bg-blak ">X</button>
-                    </div>
-                    <ul class="text-black mt-5  text-sm ">
-                        <li class="py-1"><a href="#" class="hover:underline" >The WPPOOL Index</a></li>
-                        <li class="py-1"><a href="#" class="hover:underline" >All Companies</a></li>
-                        <li class="py-1"><a href="#" class="hover:underline" >Potential Future Listings</a></li>
-                        <li class="py-1"><a href="#" class="hover:underline" >State of USA</a></li>
-                        <li class="py-1"><a href="#" class="hover:underline" >Stories & Ideas</a></li>
-                        <li class="py-1"><a href="#" class="hover:underline" >About WPPOOL</a></li>
-                        <li class="py-1"><a href="#" class="hover:underline" >WPPOOL Portfolio Companies</a></li>
-                        <li class="py-1"><a href="#" class="text-primary hover:underline">Visit WPPOOL</a></li>
-                    </ul>
+                    <button class="primary-btn">Download the 2024 Report</button>
+                    <button id="menu-close-two"  class="text-black border border-black cursor-pointer rounded-full px-4 py-2  w-fit bg-blak ">X</button>
                 </div>
-                <!-- menu ends here -->
+                <ul class="text-black mt-5  text-sm ">
+                    <li class="py-1"><a href="#" class="hover:underline" >The WPPOOL Index</a></li>
+                    <li class="py-1"><a href="#" class="hover:underline" >All Companies</a></li>
+                    <li class="py-1"><a href="#" class="hover:underline" >Potential Future Listings</a></li>
+                    <li class="py-1"><a href="#" class="hover:underline" >State of USA</a></li>
+                    <li class="py-1"><a href="#" class="hover:underline" >Stories & Ideas</a></li>
+                    <li class="py-1"><a href="#" class="hover:underline" >About WPPOOL</a></li>
+                    <li class="py-1"><a href="#" class="hover:underline" >WPPOOL Portfolio Companies</a></li>
+                    <li class="py-1"><a href="#" class="text-primary hover:underline">Visit WPPOOL</a></li>
+                </ul>
             </div>
-        </nav>
-        <!-- nav-bar ends here -->
-
-        <!-- banner starts from here -->
-        <div style="background-image: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,0.0)), url('./src/assets/banner-bg.png'); background-repeat: no-repeat; background-position: center; mix-blend-mode: inherit;  " class="banner pt-40 md:pt-0 flex flex-col md:items-center md:justify-center gap-10 min-h-[90vh] relative" >
-            <div class="w-full text-center">
-                <div class="text-white">
-                    <h1 class="text-4xl md:text-6xl font-semibold tracking-wide">The WPPOOL Index</h1>
-                    <p class="my-2 text-gray-200 text-lg">Monitor the performance of emerging, publicly traded financial technology company!</p>
-                </div>
-            </div>
-            
-            <div class="absolute left-5 bottom-32 md:bottom-5 grid grid-cols-2 md:grid-cols-1 place-items-center md:place-items-start gap-y-5 text-gray-300">
-                <div>
-                    <h1 class="text-4xl">55</h1>
-                    <p class="text-gray-400 text-lg">Companies</p>
-                </div>
-                <div>
-                    <h1 class="text-4xl">$397B</h1>
-                    <p class="text-gray-400 text-lg">Market cap</p>
-                </div>
-                <div>
-                    <h1 class="text-4xl">3.7x</h1>
-                    <p class="text-gray-400 text-lg">Revenue multiple</p>
-                </div>
-                <div>
-                    <h1 class="text-4xl">48%</</h1>
-                    <p class="text-gray-400 text-lg">LTM avg. revenue growth rate</p>
-                </div>
-            </div>
-            <button class="absolute right-5 bottom-5 w-[3rem] h-[3rem] bg-white rounded-full p-2 text-black">
-                <img src="./src/assets/downArrow.svg" alt="down arrow" class="w-full h-full">
-            </button>
         </div>
-        <!-- banner ends here -->
-    </header>
+    </nav>
+    <!-- menu ends here -->
 
-    <main class="w-full border-2 bg-gray-200  ">
-
-        <!-- admin dashboard-with-chart section -->
-        <section id="admin-chart" class="my-20 text-black bg-white px-5 py-3 ">
-            <!-- nav-bar starts from here -->
-            <nav class="flex items-center justify-between">
-                <div class="left logo">
-                    <div class="w-2/3">
-                        <img src="./src/assets/logo2.png" alt="WPPOOL's logo" class="w-full h-full">
+    <main class="w-full bg-gray-200 z-10 ">
+        <!-- banner section starts from here -->
+        <section id="banner-section" class="bg-primary px-5 py-3">
+            <!-- banner starts from here -->
+            <div style="background-image: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,0.0)), url('./src/assets/banner-bg.png'); background-repeat: no-repeat; background-position: center; mix-blend-mode: inherit;  " class="banner pt-40 md:pt-0 flex flex-col md:items-center md:justify-center gap-10 min-h-[90vh] relative" >
+                <div class="w-full text-center">
+                    <div class="text-white">
+                        <h1 class="text-4xl md:text-6xl font-semibold tracking-wide">The WPPOOL Index</h1>
+                        <p class="my-2 text-gray-200 text-lg">Monitor the performance of emerging, publicly traded financial technology company!</p>
                     </div>
                 </div>
-                <div class="right flex items-center gap-5 relative">
-                    <button class="hidden md:block bg-black w-8 h-8 border rounded-full p-1.5">
-                        <img src="./src/assets/share-node.svg" alt="share node icon" class="w-full h-full">
-                    </button>
-                    <button class="hidden md:block primary-btn">Download the 2024 Report</button>
-                    <button id="menu-toggle-two" class="menu-toggle flex flex-col gap-1">
-                        <div class="menu-line1 bg-black h-[.12rem] w-5 rounded-full"></div>
-                        <div class="menu-line2 bg-black h-[.12rem] w-5 rounded-full"></div>
-                        <div class="menu-line3 bg-black h-[.12rem] w-5 rounded-full"></div>
-                    </button>
-                    <!-- menu starts here -->
-                    <div id="menu-items-parent-two" class="menu-items hidden absolute top-8 md:top-[0rem] right-0 bg-primary shadow-lg rounded-lg p-5 w-[90vw] md:w-[25rem] text-white z-50 ">
-                        <div class="flex items-center md:justify-between  gap-4 ">
-                            <button class="bg-black w-10 h-10 border rounded-full p-3">
-                            <img src="./src/assets/share-node.svg" alt="share node icon" class="w-full h-full">
-                            </button>
-                            <button class="primary-btn-two bg-primary">Download the 2024 Report</button>
-                            <button id="menu-close-two" class="text-white border border-white cursor-pointer rounded-full px-4 py-2  w-fit bg-blak ">X</button>
-                        </div>
-                        <ul class="text-white mt-5  text-sm ">
-                            <li class="py-1"><a href="#" class="hover:underline" >The WPPOOL Index</a></li>
-                            <li class="py-1"><a href="#" class="hover:underline" >All Companies</a></li>
-                            <li class="py-1"><a href="#" class="hover:underline" >Potential Future Listings</a></li>
-                            <li class="py-1"><a href="#" class="hover:underline" >State of USA</a></li>
-                            <li class="py-1"><a href="#" class="hover:underline" >Stories & Ideas</a></li>
-                            <li class="py-1"><a href="#" class="hover:underline" >About WPPOOL</a></li>
-                            <li class="py-1"><a href="#" class="hover:underline" >WPPOOL Portfolio Companies</a></li>
-                            <li class="py-1"><a href="#" class="text-primary hover:underline">Visit WPPOOL</a></li>
-                        </ul>
+                
+                <div class="absolute left-5 bottom-32 md:bottom-5 grid grid-cols-2 md:grid-cols-1 place-items-center md:place-items-start gap-y-5 text-gray-300">
+                    <div>
+                        <h1 class="text-4xl">55</h1>
+                        <p class="text-gray-400 text-lg">Companies</p>
                     </div>
-                    <!-- menu ends here -->
+                    <div>
+                        <h1 class="text-4xl">$397B</h1>
+                        <p class="text-gray-400 text-lg">Market cap</p>
+                    </div>
+                    <div>
+                        <h1 class="text-4xl">3.7x</h1>
+                        <p class="text-gray-400 text-lg">Revenue multiple</p>
+                    </div>
+                    <div>
+                        <h1 class="text-4xl">48%</</h1>
+                        <p class="text-gray-400 text-lg">LTM avg. revenue growth rate</p>
+                    </div>
                 </div>
-            </nav>
-        <!-- nav-bar ends here -->
+                <button class="absolute right-5 bottom-5 w-[3rem] h-[3rem] bg-white rounded-full p-2 text-black">
+                    <img src="./src/assets/downArrow.svg" alt="down arrow" class="w-full h-full">
+                </button>
+            </div>
+            <!-- banner ends here -->
         </section>
-        <!-- admin dashboard-with-chart section -->
+        <!-- banner section ends here -->
+
+        <!-- dashboard-section starts from here -->
+        <nav id="second-navbar-sticky" class="w-full md:w-[95vw] mx-auto mt-10 bg-white md:py-2 md:px-6 sticky top-0 z-[1000] ">
+                <div class="bg-gray-200 rounded-md py-3 md:py-2 px-4 flex items-center justify-between">
+                    <div class="left logo">
+                        <div class="w-3/5">
+                            <img src="./src/assets/logo2.png" alt="WPPOOL's logo" class="w-full h-full">
+                        </div>
+                    </div>
+                    <div class="right flex items-center gap-5 relative">
+                        <button class="hidden md:block w-8 h-8 border border-black rounded-full p-1.5">
+                            <img src="./src/assets/share-node2.svg" alt="share node icon" class="w-full h-full">
+                        </button>
+                        <button class="hidden md:block primary-btn-two ">Download the 2024 Report</button>
+                        <button id="menu-toggle" class="menu-toggle flex flex-col gap-1">
+                            <div class="menu-line1 bg-black h-[.12rem] w-5 rounded-full"></div>
+                            <div class="menu-line2 bg-black h-[.12rem] w-5 rounded-full"></div>
+                            <div class="menu-line3 bg-black h-[.12rem] w-5 rounded-full"></div>
+                        </button>
+                            <!-- menu starts here -->
+                        <div id="menu-items-parent" class="menu-items hidden absolute top-8 md:top-[0rem] right-0 bg-white shadow-lg rounded-lg p-5 w-[90vw] md:w-[25rem] text-black z-50 ">
+                            <div class="flex items-center md:justify-between  gap-4 ">
+                                <button class="bg-black w-10 h-10 border rounded-full p-3">
+                                    <img src="./src/assets/share-node.svg" alt="share node icon" class="w-full h-full">
+                                    </button>
+                                <button class="primary-btn">Download the 2024 Report</button>
+                                <button id="menu-close" class="text-black border border-black cursor-pointer rounded-full px-4 py-2  w-fit bg-blak ">X</button>
+                            </div>
+                            <ul class="text-black mt-5  text-sm ">
+                                <li class="py-1"><a href="#" class="hover:underline" >The WPPOOL Index</a></li>
+                                <li class="py-1"><a href="#" class="hover:underline" >All Companies</a></li>
+                                <li class="py-1"><a href="#" class="hover:underline" >Potential Future Listings</a></li>
+                                <li class="py-1"><a href="#" class="hover:underline" >State of USA</a></li>
+                                <li class="py-1"><a href="#" class="hover:underline" >Stories & Ideas</a></li>
+                                <li class="py-1"><a href="#" class="hover:underline" >About WPPOOL</a></li>
+                                <li class="py-1"><a href="#" class="hover:underline" >WPPOOL Portfolio Companies</a></li>
+                                <li class="py-1"><a href="#" class="text-primary hover:underline">Visit WPPOOL</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+
+        <section id="dashboard-section" class="w-full md:w-[95vw] mx-auto bg-white pt-4 p-6 flex flex-col md:flex-row items-start justify-between gap-5">
+            <div class="left bg-gray-200 w-full md:w-[20%] rounded-lg p-2 ">
+                <ul class="space-y-2">
+                    <li class="text-white bg-primary p-2 rounded-lg flex items-center justify-between"><a href="#">The Index</a> <button>-</button> </li>
+                    <li class="p-2 rounded-lg flex items-center justify-between hover:li-design "><a href="#">The Index Tab two</a> <button>+</button> </li>
+                    <li class="p-2 rounded-lg flex items-center justify-between"><a href="#">The Index Tab three</a> <button>+</button> </li>
+                    <li class="p-2 rounded-lg flex items-center justify-between"><a href="#">The Index Tab four</a> <button>+</button> </li>
+                    <li class="p-2 rounded-lg flex items-center justify-between"><a href="#">The Index Tab five</a> <button>+</button> </li>
+                </ul>
+            </div>
+            <div class="right bg-white w-full md:w-[80%] p-2 ">
+                <div class="heading flex items-center gap2">
+                    <div class="union">
+                        <img src="./src/assets/union.png" alt="union">
+                    </div>
+                    <h1 class="text-4xl">The WPPOOL Index </h1>
+                </div>
+                <div class="top-short-section my-3 grid grid-cols-2 md:grid-cols-4 gap-4 ">
+                    <div class="box-1 bg-gray-200 hover:bg-gray-300 duration-500 rounded-md p-2 flex items-center justify-between  ">
+                        <h1 class="text-2xl text-[#FC714D]" >+66.2%</h1>
+                        <div class="flex flex-row items-center gap-2 ">
+                            <div class="text-sm text-right">
+                                <p>WPPOOL</p>
+                                <p>Index</p>
+                            </div>
+                            <hr class="border-2 border-[#fc714d] h-[2.5rem] rounded-md ">
+                        </div>
+                    </div>
+                    <div class="box-2 bg-gray-200 hover:bg-gray-300 duration-500 rounded-md p-2 flex items-center justify-between  ">
+                        <h1 class="text-2xl text-[#615DE3]" >+26.6%</h1>
+                        <div class="flex flex-row items-center gap-2 ">
+                            <div class="text-sm text-right">
+                                <p>WPPOOL</p>
+                                <p>Index</p>
+                            </div>
+                            <hr class="border-2 border-[#615DE3] h-[2.5rem] rounded-md ">
+                        </div>
+                    </div>
+                    <div class="box-3 bg-gray-200 hover:bg-gray-300 duration-500 rounded-md p-2 flex items-center justify-between  ">
+                        <h1 class="text-2xl text-[#8ba763]" >+34.1%</h1>
+                        <div class="flex flex-row items-center gap-2 ">
+                            <div class="text-sm text-right">
+                                <p>WPPOOL</p>
+                                <p>Index</p>
+                            </div>
+                            <hr class="border-2 border-[#8ba763] h-[2.5rem] rounded-md ">
+                        </div>
+                    </div>
+                    <div class="box-4 bg-gray-200 hover:bg-gray-300 duration-500 rounded-md p-2 flex items-center justify-between  ">
+                        <h1 class="text-2xl text-[#6F34A1]" >+17%</h1>
+                        <div class="flex flex-row items-center gap-2 ">
+                            <div class="text-sm text-right">
+                                <p>WPPOOL</p>
+                                <p>Index</p>
+                            </div>
+                            <hr class="border-2 border-[#6F34A1] h-[2.5rem] rounded-md ">
+                        </div>
+                    </div>
+                </div>
+                <div class="selections flex flex-col md:flex-row items-center justify-between gap-4 ">
+                    <div class="left flex items-center justify-between gap-3">
+                        <select name="selectors" class="primary-btn">
+                            <option value="0">Selectors</option>
+                            <option value="1">Select-1</option>
+                            <option value="2">Select-2</option>
+                            <option value="3">Select-3</option>
+                        </select>
+                        <select name="selectors" class="primary-btn">
+                            <option value="0">Types of IPO</option>
+                            <option value="1">Select-1</option>
+                            <option value="2">Select-2</option>
+                            <option value="3">Select-3</option>
+                        </select>
+                    </div>
+                    <div class="right bg-gray-200 rounded-full pl-4 md:pl-10 pr-4 flex items-center ">
+                        <p class="text-primary px-4 py-1.5 rounded-full hover:text-white hover:bg-primary duration-500">1Y</p>
+                        <p class="text-primary px-4 py-1.5 rounded-full hover:text-white hover:bg-primary duration-500">YTD</p>
+                        <p class="text-primary px-4 py-1.5 rounded-full hover:text-white hover:bg-primary duration-500">6M</p>
+                        <p class="text-primary px-4 py-1.5 rounded-full hover:text-white hover:bg-primary duration-500">1M</p>
+                        <p class="text-primary px-4 py-1.5 rounded-full hover:text-white hover:bg-primary duration-500">1W</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- dashboard-section ends here -->
 
         <!-- all companies section starts form here -->
-        <section id="all-companies" class="my-20 w-full md:w-[98vw] mx-auto">
-            <div class="bg-white rounded-lg overflow-auto p-6 p4 ">
+        <section id="all-companies" class="z-10 my-20 w-full md:w-[95vw] mx-auto">
+            <div class="bg-white rounded-lg  p-6 p4 overflow-auto ">
                 <div class="heading-and-search-box flex flex-col md:flex-row md:items-center justify-between gap-2">
                     <h1 class="text-4xl flex-1">All Companies</h1>
                     <form class="w-full flex-1 relative">
@@ -144,9 +227,9 @@
                         </div>
                     </form>
                 </div>
-                <div class="table w-full mt-8 text-sm ">
-                    <div>
-                        <table class="min-w-full bg-white">
+                <div class="table w-full mt-8 text-sm overflow-auto ">
+                    <div class="max-h-[50vh] overflow-auto">
+                        <table class="min-w-full">
                             <thead>
                                 <tr>
                                     <th class="px-4 py-3 ">Company</th>
@@ -293,7 +376,7 @@
         <!-- all companies section ends here -->
 
         <!-- potential future listing section starts from   -->
-        <section id="Potential-future-listng" class="my-20 w-full md:w-[85vw] mx-auto " >
+        <section id="Potential-future-listng" class="my-20 px-2 w-full md:w-[85vw] mx-auto " >
             <h1 class="text-4xl">Potential Future Listing </h1>
             <p class="text-sm w-full md:w-2/3 my-2 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nostrum, corporis tempora sint tempore consequatur illum nemo modi nisi dolorum facilis sed earum ea neque! </p>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
@@ -333,7 +416,7 @@
         <!-- future listing section starts from   -->
 
         <!-- states-of-USA section starts from here -->
-        <section id="states-of-USA" style="background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url('./src/assets/slider-bg.png'); background-repeat: no-repeat; background-position: 100% calc(100% + 20px); background-size: contain; "  class="my-20 w-full md:w-[88vw] mx-auto">
+        <section id="states-of-USA" style="background-image: linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)), url('./src/assets/slider-bg.png'); background-repeat: no-repeat; background-position: 100% calc(100% + 20px); background-size: contain; "  class="my-20 px-2 w-full md:w-[88vw] mx-auto">
             <h1 class="text-4xl">State of USA</h1>
             <select name="select-year" class="mt-2 text-lg text-white bg-primary border border-transparent px-4 py-1.5 rounded-full hover:text-primary hover:bg-white hover:border-primary duration-500">
                 <option value="2024">2024</option>
@@ -466,7 +549,7 @@
         <!-- states-of-USA section starts from here -->
 
         <!-- stories-and-ideal section starts from here -->
-        <section id="stories-and-ideal" class="my-20 w-full md:w-[85vw] mx-auto ">
+        <section id="stories-and-ideal" class="my-20 px-2 w-full md:w-[85vw] mx-auto ">
             <h1 class="text-4xl">Stories and Ideal</h1>
             <p>The latest news and updates</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12  mt-12 ">
@@ -474,7 +557,7 @@
                     <div class="img-area absolute left-4 -top-8 w-1/4 mx-auto ">
                         <img src="./src/assets/stories-ideal/s2.png" alt="story 2's image" class="w-full h-full rounded-t-md">
                     </div>
-                    <div class="absolute bottom-3 left-4 ">
+                    <div class="absolute bottom-3 left-4 pr-2">
                         <h1 class="text-primary">By: Ariyan Rahman Anas</h1>
                         <p class="text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis rem pariatur aspernatur enim nisi.</p>
                         <button class="primary-btn">Read more</button>
@@ -484,7 +567,7 @@
                     <div class="img-area absolute left-4 -top-8 w-1/4 mx-auto ">
                         <img src="./src/assets/stories-ideal/s2.png" alt="story 2's image" class="w-full h-full rounded-t-md">
                     </div>
-                    <div class="absolute bottom-3 left-4 ">
+                    <div class="absolute bottom-3 left-4 pr-2">
                         <h1 class="text-primary">By: Marwan Haque Chy</h1>
                         <p class="text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis rem pariatur aspernatur enim nisi.</p>
                         <button class="primary-btn">Read more</button>
@@ -495,7 +578,7 @@
                         <img src="./src/assets/stories-ideal/s3.png" alt="story 3's image" class="w-full h-full rounded-t-md">
                         <h1 class="absolute top-0 left-0 text-xs px-1 rounded-sm bg-white tracking-wider ">Carrot</h1>
                     </div>
-                    <div class="absolute bottom-3 left-4 ">
+                    <div class="absolute bottom-3 left-4 pr-2 ">
                         <h1 class="text-primary">By: Imam H. Hridoy</h1>
                         <p class="text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis rem pariatur aspernatur enim nisi.</p>
                         <button class="primary-btn">Read more</button>
@@ -506,7 +589,7 @@
                         <img src="./src/assets/stories-ideal/s2.png" alt="story 2's image" class="w-full h-full rounded-t-md  ">
                         <h1 class="absolute top-0 left-0 text-xs px-1 rounded-sm bg-white tracking-wider ">Carrot</h1>
                     </div>
-                    <div class="absolute bottom-3 left-4 ">
+                    <div class="absolute bottom-3 left-4 pr-2">
                         <h1 class="text-primary">By: Marwan Haque Chy</h1>
                         <p class="text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis rem pariatur aspernatur enim nisi.</p>
                         <button class="primary-btn">Read more</button>
@@ -516,7 +599,7 @@
                     <div class="img-area absolute left-4 -top-8 w-1/4 mx-auto ">
                         <img src="./src/assets/stories-ideal/s3.png" alt="story 3's image" class="w-full h-full rounded-t-md">
                     </div>
-                    <div class="absolute bottom-3 left-4 ">
+                    <div class="absolute bottom-3 left-4 pr-2">
                         <h1 class="text-primary">By: Imam H. Hridoy</h1>
                         <p class="text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis rem pariatur aspernatur enim nisi.</p>
                         <button class="primary-btn">Read more</button>
@@ -526,7 +609,7 @@
                     <div class="img-area absolute left-4 -top-8 w-1/4 mx-auto ">
                         <img src="./src/assets/stories-ideal/s2.png" alt="story 2's image" class="w-full h-full rounded-t-md">
                     </div>
-                    <div class="absolute bottom-3 left-4 ">
+                    <div class="absolute bottom-3 left-4 pr-2">
                         <h1 class="text-primary">By: Ariyan Rahman Anas</h1>
                         <p class="text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quis rem pariatur aspernatur enim nisi.</p>
                         <button class="primary-btn">Read more</button>
@@ -539,7 +622,7 @@
         <hr class="border-gray-300 rounded-full md:w-[85vw] mx-auto ">
 
         <!-- about wppool section starts from here -->
-        <section id="about-wppool" class="my-20 w-full md:w-[85vw] mx-auto bg-white rounded-lg ">
+        <section id="about-wppool" class="my-20 px-2 w-full md:w-[85vw] mx-auto bg-white rounded-lg ">
             <div class="flex flex-col-reverse md:flex-row ">
                 <div class="about-info w-full md:w-[65%] p-6 ">
                     <h1 class="text-4xl">About WPPOOL</h1>
@@ -559,7 +642,7 @@
         <hr class="border-gray-300 rounded-full md:w-[85vw] mx-auto ">
 
         <!-- portfolio companies section starts from here -->
-        <section id="selected-wppool-porfolio-companies" class="my-20 w-full md:w-[85vw] mx-auto">
+        <section id="selected-wppool-porfolio-companies" class="py-20 px-2 w-full md:w-[85vw] mx-auto">
             <h1 class="text-4xl">Selected WPPOOL Porfolio Companies</h1>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mt-6">
                 <div class="portfolio-companies">
@@ -625,11 +708,9 @@
             </div>
         </section>
         <!-- portfolio companies section starts from here -->
-
-
     </main>
 
-    <footer class=" bg-gray-200 pt-10 pb-4 ">
+    <footer class=" bg-gray-200 px-2 pt-10 pb-4 ">
         <div class="w-full md:w-[85vw] mx-auto flex flex-col items-start md:flex-row gap-8">
             <div id="left" class="border-black h-full w-full md:w-[50%] flex flex-col  justify-between gap-12 ">
                 <p class="text-2xl w-full md:w-2/3 ">Experience remarkable WordPress products with a new level of power, beauty and human-centered design.</p>
