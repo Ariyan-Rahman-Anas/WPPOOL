@@ -1,43 +1,17 @@
-// // functionality about when page scroll down
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navbar = document.getElementById("navbar");
-//   const reportDownloadBtn = document.getElementById("report-download-btn");
-//   const menuBtn = document.querySelectorAll(".menu-line");
-//   const wppoolLogo = document.getElementById("wppool-logo")
-//   const nodeShare = document.getElementById("node-share");
-//   const nodeShareParent = document.getElementById("node-share-parent");
-
-//   const offset = 80; 
-
-//   window.addEventListener("scroll", function () {
-//     if (window.scrollY > offset) {
-//       wppoolLogo.src = "./src/assets/logo2.png"
-//       nodeShare.src = "./src/assets/share-node2.svg"
-//       nodeShareParent.classList.add("borderblack")
-//       navbar.classList.remove("bg-primary");
-//       navbar.classList.add("bg-white");
-//       navbar.classList.add("shadow-lg");
-//       reportDownloadBtn.classList.remove("primary-btn-two");
-//       reportDownloadBtn.classList.add("primary-btn");
-//       menuBtn.forEach((btn) => {
-//         btn.classList.remove("bg-white");
-//         btn.classList.add("bg-black");
-//       });
-//     } else {
-//       wppoolLogo.src = "./src/assets/logo.png";
-//       nodeShare.src = "./src/assets/share-node.svg";
-//       navbar.classList.remove("bg-white");
-//       navbar.classList.add("bg-primary");
-//       navbar.classList.remove("shadow-lg");
-//       reportDownloadBtn.classList.remove("primary-btn");
-//       reportDownloadBtn.classList.add("primary-btn-two");
-//       menuBtn.forEach((btn) => {
-//         btn.classList.remove("bg-black");
-//         btn.classList.add("bg-white");
-//       });
-//     }
-//   });
-// });
+// functionality about when page scroll down
+document.addEventListener("DOMContentLoaded", function () {
+  const stickyNavbar = document.getElementById("sticky-navbar");
+  const offset = 80;
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > offset) {
+      stickyNavbar.classList.remove("md:w-[95vw]");
+      stickyNavbar.classList.add("md:w-full");
+    } else {
+      stickyNavbar.classList.remove("md:w-full");
+      stickyNavbar.classList.add("md:w-[95vw]");
+    }
+  });
+});
 
 // sticky navbar navigation function 
 document.addEventListener("DOMContentLoaded", function () {
@@ -143,4 +117,86 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", updateSliderPosition);
   updateSliderSelect(); // Initialize the slider select value on page load
+});
+
+// chart js code
+const ctx = document.getElementById("myChart");
+new Chart(ctx, {
+  type: "line",
+  data: {
+    labels: [
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+      "Jan",
+    ],
+    datasets: [
+      {
+        label: "WPPOOL",
+        data: [2, 4, 25, 10, 28.9, 16, 13, 18.5, 25.9, 17.8, 34.6, 49.7],
+        borderColor: "#FC714D",
+        fill: false,
+        pointStyle: "circle",
+      },
+      {
+        label: "Google",
+        data: [9, 10, 18, 25, 34, 46, 40, 12, 33, 66, 86, 19],
+        borderColor: "#615DE3",
+        fill: false,
+        pointStyle: "circle",
+      },
+      {
+        label: "Microsoft",
+        data: [3, 24, 11, 32.3, 39.6, 40.2, 23.5, 57.5, 30.6, 29.8, 39.6, 28],
+        borderColor: "#8ba763",
+        fill: false,
+        pointStyle: "circle",
+      },
+      {
+        label: "Twitter",
+        data: [6, 14, 33, 38.3, 29.6, 34.2, 27.5, 77.5, 33.6, 79.8, 37.6, 58],
+        borderColor: "#6F34A1",
+        fill: false,
+        pointStyle: "circle",
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 100, // set maximum value to 100
+        ticks: {
+          callback: function (value) {
+            return value + "%"; // add percentage symbol to the ticks
+          },
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        position: "bottom", // position legend at the bottom
+        labels: {
+          usePointStyle: true, // use point style for legend
+          pointStyle: "circle", // set point style to circle
+          padding: 20, // add padding between legend items
+        },
+      },
+      tooltip: {
+        callbacks: {
+          label: function (tooltipItem) {
+            return tooltipItem.dataset.label + ": " + tooltipItem.raw + "%";
+          },
+        },
+      },
+    },
+  },
 });

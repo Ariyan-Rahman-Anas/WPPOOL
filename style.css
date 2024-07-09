@@ -655,9 +655,9 @@ video {
   margin-bottom: 5rem;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-2 {
@@ -760,6 +760,10 @@ video {
   min-height: 90vh;
 }
 
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-1\/12 {
   width: 8.333333%;
 }
@@ -800,8 +804,8 @@ video {
   width: 3rem;
 }
 
-.w-\[50\%\] {
-  width: 50%;
+.w-\[49\.50\%\] {
+  width: 49.50%;
 }
 
 .w-\[90vw\] {
@@ -992,10 +996,6 @@ video {
   border-width: 2px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1047,11 +1047,6 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-primary {
-  --tw-border-opacity: 1;
-  border-color: rgb(32 66 182 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -1171,6 +1166,18 @@ video {
   padding-bottom: 1rem;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
 .pr-5 {
   padding-right: 1.25rem;
 }
@@ -1185,26 +1192,6 @@ video {
 
 .pt-40 {
   padding-top: 10rem;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
-.pl-8 {
-  padding-left: 2rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
-}
-
-.pr-2 {
-  padding-right: 0.5rem;
 }
 
 .text-center {
@@ -1415,18 +1402,6 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.li-design {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 66 182 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .portfolio-companies {
   display: flex;
   height: 100%;
@@ -1583,8 +1558,8 @@ html {
     width: 95vw;
   }
 
-  .md\:w-\[98vw\] {
-    width: 98vw;
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:grid-cols-1 {
@@ -1633,12 +1608,12 @@ html {
     padding-bottom: 0.5rem;
   }
 
-  .md\:pt-0 {
-    padding-top: 0px;
-  }
-
   .md\:pl-10 {
     padding-left: 2.5rem;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-6xl {
