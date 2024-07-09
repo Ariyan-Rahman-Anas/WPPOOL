@@ -1371,6 +1371,10 @@ video {
     width: 85vw;
   }
 
+  .md\:w-\[88vw\] {
+    width: 88vw;
+  }
+
   .md\:w-\[98vw\] {
     width: 98vw;
   }
