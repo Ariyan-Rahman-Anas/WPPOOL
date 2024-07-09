@@ -16,6 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 
+
+// navbar navigation function-2
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle2 = document.getElementById("menu-toggle-two");
+  const menuClose2 = document.getElementById("menu-close-two");
+  const menuItemsParent2 = document.getElementById("menu-items-parent-two");
+
+  menuToggle2.addEventListener("click", function () {
+    menuItemsParent2.classList.toggle("hidden");
+    menuToggle2.classList.toggle("active");
+  });
+
+  menuClose2.addEventListener("click", function () {
+    menuItemsParent2.classList.add("hidden");
+    menuToggle2.classList.remove("active");
+  });
+})
+
+
+
 //slider controlling function
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".slider");
