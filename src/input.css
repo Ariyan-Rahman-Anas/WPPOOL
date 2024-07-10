@@ -22,6 +22,7 @@ html {
   background: #78beff;
 }
 
+/* custom class for enhancing the code quality and readability */
 .primary-btn {
   @apply text-white bg-primary border border-transparent px-4 py-1.5 rounded-full hover:text-primary hover:bg-white hover:border-primary duration-500;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WPPOOL-Assignment</title>
+    <link rel="icon" type="image/svg+xml" href="./public/icon.png" />
     <link rel="stylesheet" href="style.css">
 
     <!-- chart js cdn link -->
@@ -55,17 +56,17 @@
 
     <main class="w-full bg-gray-200 z-10 ">
         <!-- banner section starts from here -->
-        <section id="banner-section" class="bg-primary px-5 py-3">
-            <!-- banner starts from here -->
-            <div style="background-image: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,0.0)), url('./src/assets/banner-bg.png'); background-repeat: no-repeat; background-position: center; mix-blend-mode: inherit;  " class="banner pt-40 md:pt-0 flex flex-col md:items-center md:justify-center gap-10 min-h-[90vh] relative" >
+        <section id="banner-section" class="bg-primary px-5 py-3 mix-blendmultiply relative ">
+            <div id="banner-div" style="background-image: linear-gradient(rgba(0,0,0,.0), rgba(0,0,0,0.0)), url('./src/assets/banner-bg.png'); background-repeat: no-repeat; background-position: center; mix-blend-mode: multiply; " class="h-[90vh] w-full"></div>
+            <div  class="absolute top-0 left-0 w-full banner pt-40 md:pt-0 flex flex-col md:items-center md:justify-center gap-10 min-h-[90vh] relativ" >
                 <div class="w-full text-center">
-                    <div class="text-white">
+                    <div class="text-white text-center ">
                         <h1 class="text-4xl md:text-6xl font-semibold tracking-wide">The WPPOOL Index</h1>
                         <p class="my-2 text-gray-200 text-lg">Monitor the performance of emerging, publicly traded financial technology company!</p>
                     </div>
                 </div>
                 
-                <div class="absolute left-5 bottom-32 md:bottom-5 grid grid-cols-2 md:grid-cols-1 place-items-center md:place-items-start gap-y-5 text-gray-300">
+                <div class="absolute left-5 bottom-32 md:bottom-5 grid grid-cols-1 md:place-items-start gap-y-5 text-gray-300">
                     <div>
                         <h1 class="text-4xl">55</h1>
                         <p class="text-gray-400 text-lg">Companies</p>
@@ -83,11 +84,10 @@
                         <p class="text-gray-400 text-lg">LTM avg. revenue growth rate</p>
                     </div>
                 </div>
-                <button class="absolute right-5 bottom-5 w-[3rem] h-[3rem] bg-white rounded-full p-2 text-black">
+                <button id="down-scroller" class="absolute right-5 bottom-5 w-[3rem] h-[3rem] bg-white rounded-full p-2 text-black">
                     <img src="./src/assets/downArrow.svg" alt="down arrow" class="w-full h-full">
                 </button>
             </div>
-            <!-- banner ends here -->
         </section>
         <!-- banner section ends here -->
 
@@ -216,10 +216,10 @@
                     </div>
                 </div>
                 <!-- chart starts -->
-                <div class="mt-12 ">
+                <div class="mt-12 w-full h-full">
                     <canvas id="myChart"></canvas>
                 </div>
-                <!-- chart ends -->
+                <!-- chart ends == chart data is in script file -->
             </div>
         </section>
         <!-- dashboard-section ends here -->
@@ -563,7 +563,7 @@
         <section id="stories-and-ideal" class="my-20 px-2 w-full md:w-[85vw] mx-auto ">
             <h1 class="text-4xl">Stories and Ideal</h1>
             <p>The latest news and updates</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12  mt-12 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-12  mt-12 ">
                 <div id="story-1" class="relative min-h-[11rem] bg-white rounded-lg shadow hover:bg-gray-100 duration-500 ">
                     <div class="img-area absolute left-4 -top-8 w-1/4 mx-auto ">
                         <img src="./src/assets/stories-ideal/s2.png" alt="story 2's image" class="w-full h-full rounded-t-md">
@@ -767,12 +767,12 @@
                     <hr class="border-gray-500 rounded-full mt-3 ">
                 </div>
                 <div class="flex items-center gap-5">
-                    <button class="linkedin w-1/12  ">
+                    <a href="#" class="linkedin w-1/12  ">
                         <img src="./src/assets/linkedin.svg" alt="linkedin's logo" class="w-full h-full">
-                    </button>
-                    <button class="twitter w-1/12 ">
+                    </a>
+                    <a href="#" class="twitter w-1/12 ">
                         <img src="./src/assets/twitter.svg" alt="twitter's logo" class="w-full h-full">
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

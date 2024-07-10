@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSliderSelect(); // Initialize the slider select value on page load
 });
 
-// chart js code
+// chart data
 const ctx = document.getElementById("myChart");
 new Chart(ctx, {
   type: "line",
@@ -162,7 +162,7 @@ new Chart(ctx, {
       },
       {
         label: "Twitter",
-        data: [6, 14, 33, 38.3, 29.6, 34.2, 27.5, 77.5, 33.6, 79.8, 37.6, 58],
+        data: [6, 14, 33, 38.3, 29.6, 34.2, 27.5, 77.5, 33.6, 79.8, 37.6, 100],
         borderColor: "#6F34A1",
         fill: false,
         pointStyle: "circle",
@@ -173,21 +173,21 @@ new Chart(ctx, {
     scales: {
       y: {
         beginAtZero: true,
-        max: 100, // set maximum value to 100
+        max: 100, 
         ticks: {
           callback: function (value) {
-            return value + "%"; // add percentage symbol to the ticks
+            return value + "%"; 
           },
         },
       },
     },
     plugins: {
       legend: {
-        position: "bottom", // position legend at the bottom
+        position: "bottom",
         labels: {
-          usePointStyle: true, // use point style for legend
-          pointStyle: "circle", // set point style to circle
-          padding: 20, // add padding between legend items
+          usePointStyle: true, 
+          pointStyle: "circle", 
+          padding: 20,
         },
       },
       tooltip: {
