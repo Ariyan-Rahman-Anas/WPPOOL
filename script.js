@@ -200,3 +200,34 @@ new Chart(ctx, {
     },
   },
 });
+
+//scrolling functionality 
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.getElementById("scrollBtn");
+  const scrollDownAmount = 580;
+  let isBottom = false;
+
+  scrollBtn.addEventListener("click", function () {
+    if (isBottom) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollBy({
+        top: scrollDownAmount,
+        behavior: "smooth",
+      });
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+      scrollBtn.innerHTML = "&#x2191;";
+      isBottom = true;
+    } else {
+      scrollBtn.innerHTML = "&#x2193;";
+      isBottom = false;
+    }
+  });
+});
