@@ -582,10 +582,6 @@ video {
   bottom: 8rem;
 }
 
-.bottom-5 {
-  bottom: 1.25rem;
-}
-
 .left-0 {
   left: 0px;
 }
@@ -606,8 +602,8 @@ video {
   right: 0.5rem;
 }
 
-.right-5 {
-  right: 1.25rem;
+.right-3 {
+  right: 0.75rem;
 }
 
 .top-0 {
@@ -622,8 +618,28 @@ video {
   top: 2rem;
 }
 
-.right-3 {
-  right: 0.75rem;
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.right-\[25\%\] {
+  right: 25%;
+}
+
+.left-\[25\%\] {
+  left: 25%;
+}
+
+.left-\[10\%\] {
+  left: 10%;
+}
+
+.right-\[10\%\] {
+  right: 10%;
 }
 
 .z-10 {
@@ -883,6 +899,10 @@ video {
 
 .flex-col-reverse {
   flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-start {
@@ -1516,16 +1536,28 @@ html {
     bottom: 1.25rem;
   }
 
-  .md\:top-\[0rem\] {
-    top: 0rem;
-  }
-
   .md\:right-5 {
     right: 1.25rem;
   }
 
+  .md\:top-\[0rem\] {
+    top: 0rem;
+  }
+
+  .md\:left-5 {
+    left: 1.25rem;
+  }
+
+  .md\:bottom-32 {
+    bottom: 8rem;
+  }
+
   .md\:block {
     display: block;
+  }
+
+  .md\:grid {
+    display: grid;
   }
 
   .md\:w-2\/3 {
@@ -1592,6 +1624,10 @@ html {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1639,5 +1675,9 @@ html {
 @media (min-width: 1024px) {
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
